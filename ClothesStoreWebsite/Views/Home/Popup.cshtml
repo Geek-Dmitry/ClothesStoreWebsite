@@ -1,0 +1,43 @@
+﻿@using ClothesStoreWebsite.Models
+
+@model ProductViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout_NotAutorize.cshtml";
+}
+
+@section Style{
+    <link rel="stylesheet" href="~/css/popup.css">
+}
+
+<div id="popup?id=@Model.Id" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a href="#" class="popup__close absolute _close"></a>
+            <div class="popup__main-content">
+                <div class="popup__image">
+                    <img class="image" src="@Model.Image" alt="popup__image">
+                </div>
+                <div class="popup__description _block">
+                    <div class="popup__title">@Model.Name</div>
+                    <div class="popup__price">@Model.Price</div>
+                    <div class="popup-size">
+                        <div class="popup-size__title _box-title">Size</div>
+                        <div class="popup-size__list">
+                            <select class="popup-size__select _size-box _box-text _select" name="Select">
+                                <option selected disabled hidden class="popup-size__option">Select</option>
+                                <option class="popup-size__option">@Model.Size</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="popup-quantity">
+                        <div class="popup-quantity__title _box-title">Quantity</div>
+                        <input class="popup-quantity__list" type="number" step="1" min="1" max="999" value="1">
+                    </div>
+                    <a class="popup-buttons _button-product _buttons" href="">Add to Cart</a>
+                    <a class="popup-buttons__inform" href="/Home/Product?id=1">Additional Information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

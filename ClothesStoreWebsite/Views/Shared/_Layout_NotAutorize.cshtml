@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @RenderSection("Title", required: false)
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/layout.css">
+    <link rel="stylesheet" href="~/css/button.css">
+    <link rel="stylesheet" href="~/css/icons.css">
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    @RenderSection("Style", required: false)
+    @RenderSection("Scripts", required: false)
+</head>
+
+<body>
+    <header id="#header" class="header">
+        <div class="container">
+            <div class="header-main">
+                <nav class="header-menu" id="header-menu">
+                    <a href="/Home/Index#shop" id="#shop" class="shop btn-reset transition scroll" aria-label="shop">
+                        shop
+                    </a>
+                    <a href="/Home/Index#about" id="#about" class="about btn-reset transition scroll" aria-label="about">
+                        about
+                    </a>
+                    <a href="#" class="faq btn-reset transition scroll" aria-label="faq">
+                        faq
+                    </a>
+                    <a class="contact btn-reset transition scroll" aria-label="contact">
+                        contact
+                    </a>
+                </nav>
+                <nav class="header-logo" id="header-logo">
+                    <a href="/Home/Index#hero" id="#hero" class="logo scroll">
+                        <img src="#" alt="Logo">
+                    </a>
+                </nav>
+                <div class="header-icons">
+                    <a class="Login btn-reset header-icon Login" href="/User/Login">
+                        Log In
+                    </a>
+                    <div class="social-icons">
+                        <button class="instagram btn-reset header-icon instagram" aria-label="instagram"></button>
+                    </div>
+                    <button class="basket btn-reset header-icon basket" aria-label="basket">
+                        <div class="basket-count">0</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        @RenderBody()
+        @RenderSection("Popup", required: false)
+    </div>
+
+    <section class="feedback">
+        <div class="container">
+            <div class="feedback-container">
+                <h6 class="feedback-title">
+                    Never miss our updates about new <br />
+                    arrivals and special offers
+                </h6>
+                <form class="feedback-user-email">
+                    <div class="user-email-container">
+                        <input class="user-email" type="email" , placeholder="Enter your email here">
+                        <div class="box-under-input">
+                        </div>
+                    </div>
+                    <button class="subcribe button-base transition">
+                        Subcribe Now
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-menu scroll">
+                <a href="#shop" class="footer-menu__button">
+                    shop
+                </a>
+                <a href="#about" class="footer-menu__button">
+                    about
+                </a>
+                <a href="" class="footer-menu__button">
+                    shipping & return
+                </a>
+                <a href="" class="footer-menu__button">
+                    faq
+                </a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

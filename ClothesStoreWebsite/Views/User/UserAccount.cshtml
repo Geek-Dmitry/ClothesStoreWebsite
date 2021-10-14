@@ -1,0 +1,82 @@
+﻿@using ClothesStoreWebsite.Models;
+
+@model UserAccountViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout_UserAccount.cshtml";
+}
+
+@section Title {
+    <title>Account</title>
+}
+
+@section Style {
+    <link rel="stylesheet" href="~/css/userAccount.css">
+}
+
+<div class="box">
+    <div class="box__title">Мой аккаунт</div>
+    <div class="box__text">Просмотрите и отредактируйте сведения о себе.</div>
+</div>
+<form class="account__form">
+    <div class="box">
+        <div class="box__subtitle">
+            Открытая информация
+        </div>
+        <div class="box__text">
+            Карточка профиля видна всем пользователям этого сайта
+        </div>
+        <div class="box__infotext">
+            Имя для показа*
+        </div>
+        @Html.TextBoxFor(model => model.DisplayName, new
+        {
+            @class = "box__input",
+            @value = Model.DisplayName
+        })
+        @Html.ValidationMessageFor(model => model.DisplayName)
+    </div>
+    <div class="box__content">
+        <div class="box__subtitle">
+            Аккаунт
+        </div>
+        <div class="box__text">
+            Обновите и отредактируйте информацию, которой вы делитесь с сообществом
+        </div>
+        <div class="box__text">
+            Эл. почта для входа:<br>
+            @Model.Email
+            <div class="box__infotext">
+                Адрес эл. почты, используемый для входа, нельзя изменить
+            </div>
+        </div>
+        <div class="box__infotext">Имя</div>
+        @Html.TextBoxFor(model => model.Name, new
+ {
+     @class = "box__input",
+     @value = Model.Name
+ })
+        @Html.ValidationMessageFor(model => model.Name)
+
+        <div class="box__infotext">Фамилия</div>
+        @Html.TextBoxFor(model => model.Surname, new
+  {
+      @class = "box__input",
+      @value = Model.Surname
+  })
+        @Html.ValidationMessageFor(model => model.Surname)
+
+        <div class="box__infotext">Телефон</div>
+        @Html.TextBoxFor(model => model.Telephone, new
+  {
+      @class = "box__input",
+      @value = Model.Telephone
+  })
+        @Html.ValidationMessageFor(model => model.Telephone)
+
+        <div class="box__buttons">
+            <input type="submit" id="accountReset" class="button__reset btn-reset button-base" value="Reset" />
+            <input type="submit" id="accountSave" class="button__save btn-reset button-base" value="Save" />
+        </div>
+    </div>
+</form>

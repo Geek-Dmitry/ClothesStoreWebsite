@@ -1,0 +1,123 @@
+﻿@using ClothesStoreWebsite.Models;
+
+@model List<ProductViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout_NotAutorize.cshtml";
+}
+
+@section Title {
+    <title>Index</title>
+}
+
+@section Style {
+    <link rel="stylesheet" href="~/css/index.css">
+}
+
+@section Scripts {
+    <script src="~/js/index.js"></script>
+}
+
+<section class="hero" id="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-back-imgs">
+                <div class="back-img-left">
+                    <img src="~/lib/image/back-img-left.jpg" class="img-left" alt="">
+                </div>
+                <div class="back-img-right scroll-animation moving-from-left">
+                    <img src="~/lib/image//back-img-right.jpg" class="img-right" alt="">
+                </div>
+            </div>
+            <div class="hero-text-button absolute">
+                <div class="hero-text-button-flex scroll-animation">
+                    <div class="hero-title">
+                        <h1 class="hero-title-text">
+                            anna stone&ensp;&
+                        </h1>
+                        <h1 class="hero-title-text-weight">
+                            &ensp;jud.
+                        </h1>
+                    </div>
+                    <p class="hero-descr">
+                        Introducing the Capsule Collection
+                    </p>
+                    <nav class="shop-button">
+                        <a href="/Home/Index/#shop" id="#shop" class="shop-button button-base transition scroll">
+                            shop now
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="shop" id="shop">
+    <div class="container">
+        <h2 class="shop-title">
+            Explore the Collection
+        </h2>
+        @foreach (var productViewModel in Model)
+        {
+            <div class="shop-item-container">
+                <div class="shop-item-card">
+                    <a class="item-image-quick-view" href="/Home/Product?id=@productViewModel.Id">
+                        <div class="item-image-container">
+                            <img src="@productViewModel.Image" alt="shop-item-image"
+                                 class="item-image scale transition">
+                        </div>
+                    </a>
+                    <a class="item-image-quick-view" href="/Home/Popup?id=@productViewModel.Id">
+                        <div class="quick-view-block absolute transition">
+                            <h4 class="quick-view-text transition">
+                                Quick View
+                            </h4>
+                        </div>
+                    </a>
+                    <a class="item-text" href="/Home/Product?id=@productViewModel.Id">
+                        <h3 class="item-title">
+                            @productViewModel.Name
+                        </h3>
+                        <p class="item-price">
+                            @productViewModel.Price
+                        </p>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-container scroll-animation">
+            <h2 class="about-title">
+                About the Collection
+            </h2>
+            <p class="about-descr">
+                I'm a paragraph. Click here to add your own text and edit me. It’s easy.
+                Just click “Edit Text” or double click me to add your own content and make changes to
+                the font.
+                I’m a great place for you to tell a story and let your users know a little more
+                about you.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="image-section">
+    <div class="container">
+        <div class="image-section-container">
+            <h5 class="image-letter-upper scroll-animation">
+                a
+            </h5>
+            <div class="image-container scroll-animation moving-from-left">
+                <img src="~/lib/image//shop-item-img.jpg" alt="image" class="image">
+            </div>
+            <h5 class="image-letter-bottom scroll-animation">
+                j.
+            </h5>
+        </div>
+    </div>
+</section>

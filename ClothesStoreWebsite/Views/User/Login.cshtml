@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/login.css">
+    <link rel="stylesheet" href="~/css/icons.css">
+    <link rel="stylesheet" href="~/css/button.css">
+
+    @using ClothesStoreWebsite.Models;
+    @model LoginViewModel
+
+</head>
+
+<body>
+    <div class="login-exit">
+        <a class="login-exit__icon _close" href="/Home/Index"></a>
+    </div>
+    <div class="container">
+        <div class="login _login-container">
+            <div class="login__title">
+                Log In
+            </div>
+            <div>
+                <div class="login__text">
+                    New to this site? <a class="login__link" href="/User/Signup">Sign Up</a>
+                </div>
+            </div>
+            <form class="login-form" action="/User/Login" method="post">
+                <div class="login-form__title">
+                    Email
+                </div>
+                <div class="login-form__input-container">
+                    @Html.TextBoxFor(x => x.Email)
+                    @Html.ValidationMessageFor(x => x.Email)
+                </div>
+                <div class="login-form__title">
+                    Password
+                </div>
+                <div class="login-form__input-container">
+                    @Html.TextBoxFor(x => x.Password, new { @type = "password"})
+                    @Html.ValidationMessageFor(x => x.Password)
+                </div>
+                <a href="#" class="login-form__link">Forgot password?</a>
+                <input class="login-form__button btn-reset button-base" type="submit" id="login" value="Log In" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

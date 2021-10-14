@@ -1,0 +1,28 @@
+﻿@using ClothesStoreWebsite.Models;
+
+@model UserAccountViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout_UserAccount.cshtml";
+}
+
+@section Title {
+    <title>Account</title>
+}
+
+@section Style {
+    <link rel="stylesheet" href="~/css/userAccount.css">
+}
+
+<div class="box">
+    <div class="box__title">Мой список избранного</div>
+    <div class="box__text">Смотрите понравившиеся товары, которые вы добавили в список желаемого.</div>
+</div>
+<div class="box__content">
+    <div class="box__subtitle">
+        Вы еще не добавили ни одного товара.
+    </div>
+    <a href="/Home/Index#shop" id="#shop" class="box__text" aria-label="shop">
+        Перейти к добавлению товаров
+    </a>
+</div>

@@ -1,0 +1,88 @@
+﻿@using ClothesStoreWebsite.Models;
+
+@model ProductViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout_NotAutorize.cshtml";
+}
+
+@section Title {
+    <title>Index</title>
+}
+
+@section Style{
+    <link rel="stylesheet" href="~/css/product.css">
+}
+
+@section Scripts {
+    <script src="~/js/product.js"></script>
+}
+
+<div class="product-card">
+    <div class="product-card__body body">
+        <div class="product-card__image-text _block">
+            <div class="product-card__image">
+                <img class="image" src="@Model.Image" alt="product-card__image">
+            </div>
+            <div class="product-card__text">
+                @Model.Description
+            </div>
+        </div>
+        <div class="product-card__description _block">
+            <div class="product-card__title">@Model.Name</div>
+            <div class="product-card__price">@Model.Price</div>
+            <div class="size">
+                <div class="size__title _box-title">Size</div>
+                <div class="size__list">
+                    <select class="size__select _size-box _box-text _select" name="Select">
+                        <option selected disabled hidden class="size__option">Select</option>
+                        <option class="size__option">@Model.Size</option>
+                    </select>
+                </div>
+            </div>
+            <div class="quantity">
+                <div class="quantity__title _box-title">Quantity</div>
+                <div class="quantity__list">
+                    <input class="_quantity-box _box-text _select" type="number" step="1" min="1" max="999" value="1">
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="buttons__block">
+                    <div class="buttons__add">
+                        <a class="_button-product _buttons _text" href="">Add to Cart</a>
+                    </div>
+                    <a class="buttons__favorites _button-product _favorite" href=""></a>
+                </div>
+                <div class="buttons__buy">
+                    <a class="button-base _text _buttons" href="">Buy Now</a>
+                </div>
+            </div>
+            <div class="spoiler one">
+                <div class="spoiler__item">
+                    <div class="spoiler__title">Product info</div>
+                    <div class="spoiler__description">
+                        @Model.Info
+                    </div>
+                </div>
+                <div class="spoiler__item">
+                    <div class="spoiler__title">Return & refund policy</div>
+                    <div class="spoiler__description">
+                        I’m a Return and Refund policy. I’m a great place to let your customers know
+                        what to do in case they are dissatisfied with their purchase.
+                        Having a straightforward refund or exchange policy is a great way to build trust
+                        and reassure your customers that they can buy with confidence.
+                    </div>
+                </div>
+                <div class="spoiler__item">
+                    <div class="spoiler__title">Shipping info</div>
+                    <div class="spoiler__description">
+                        I'm a shipping policy. I'm a great place to add more information about your shipping
+                        methods, packaging and cost. Providing straightforward information about your shipping
+                        policy is a great way to build trust and reassure your customers that they can buy from
+                        you with confidence.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

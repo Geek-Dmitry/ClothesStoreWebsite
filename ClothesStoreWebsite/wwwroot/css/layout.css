@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h6 {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
+}
+
+.transition {
+    transition: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    width: 95%;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(255,255,255);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+
+    width: 100%;
+    height: 80px;
+}
+
+.header .container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .container .header-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header .container .header-main .header-menu {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex: 1;
+}
+
+.header .container .header-main .header-menu a{
+    text-transform: uppercase;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: rgb(93, 150, 146);
+
+    padding-right: 30px;
+}
+
+.header .container .header-main .header-menu a:hover{
+    color: rgb(167,207,205);
+}
+
+.header .container .header-main .header-menu a.active {
+    color: rgb(167,207,205);
+}
+
+.header .container .header-main .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.header .container .header-main .header-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+.header .container .header-main .header-icons .header-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 30px;
+}
+
+.header .container .header-icons .header-icon:hover {
+    color: grey;
+}
+
+.header .container .header-icons .basket .basket-count {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    border-radius: 50%;
+    background:black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header .container .header-icons .basket:hover .basket-count {
+    border: 1px solid black;
+    background: white;
+    color: black;
+    font-weight: 400;
+}
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(245, 245, 245, 0.7);
+}
+
+.feedback .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback .container .feedback-container {
+    width: 900px;
+}
+
+.feedback .container .feedback-container .feedback-title {
+    text-align: center;
+    margin: 70px 0px 70px 0px;
+}
+
+.feedback .container .feedback-container .feedback-user-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback .container .feedback-container .feedback-user-email .user-email-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 60px;
+}
+
+.feedback .container .feedback-container .feedback-user-email .user-email-container .user-email {
+    border: none;
+    background-color: rgba(245, 245, 245, 0);
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: rgb(107, 106, 106);
+    margin: 0;
+    padding: 0;
+
+    width: 95%;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+.feedback .container .feedback-container .feedback-user-email .user-email-container .box-under-input {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(43,43,43);
+}
+
+.feedback .container .feedback-container .feedback-user-email .user-email-container:hover .box-under-input {
+    height: 3px;
+}
+
+.feedback .container .feedback-container .feedback-user-email .user-email-container:hover .user-email{
+    padding-top: 2px;
+}
+
+.feedback .container .feedback-container .feedback-user-email .subcribe {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 70px;
+    font-weight: 200;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43,43,43);
+
+    height: 70px;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .container .footer-menu {
+    display: flex;
+    
+    width: 900px;
+}
+
+.footer .container .footer-menu a {
+    display: flex;
+    justify-content: center;
+
+    flex: 1;
+
+    text-transform: uppercase;
+    color: rgb(225,217,206);
+}
+
+.footer .container .footer-menu a:hover {
+    color: rgb(209, 190, 164);
+}

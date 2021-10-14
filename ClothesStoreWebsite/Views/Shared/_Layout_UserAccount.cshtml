@@ -1,0 +1,49 @@
+﻿@using ClothesStoreWebsite.Models;
+
+@model UserAccountViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout_NotAutorize.cshtml";
+}
+
+@section Title{
+    @RenderSection("Title", required: false)
+}
+
+@section Style {
+    <link rel="stylesheet" href="~/css/layoutAccount.css">
+    @RenderSection("Style", required: false)
+    @RenderSection("Scripts", required: false)
+}
+
+
+
+<div class="content">
+    <div class="content__container">
+        <div class="container__left">
+            <div class="profile">
+                <img src="@Model.Image" class="profile__image">
+                <div class="profile__text">@Model.DisplayName</div>
+            </div>
+            <div class="container__menu">
+                <div class="menu">
+                    @Html.ActionLink("My Orders", "MyOrders", "User",
+                   new { id = Model.Id },
+                   new { @class = "menu__item" })
+                    @Html.ActionLink("My Addresses", "MyAddresses", "User",
+                   new { id = Model.Id },
+                   new { @class = "menu__item" })
+                    @Html.ActionLink("My Wishlist", "MyWishlist", "User",
+                   new { id = Model.Id },
+                   new { @class = "menu__item" })
+                    @Html.ActionLink("My Account", "MyAccount", "User",
+                   new { id = Model.Id },
+                   new { @class = "menu__item" })
+                </div>
+            </div>
+        </div>
+        <div class="container__right">
+            @RenderBody()
+        </div>
+    </div>
+</div>

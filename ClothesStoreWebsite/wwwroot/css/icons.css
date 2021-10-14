@@ -1,0 +1,64 @@
+.header-icon::before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: ' ';
+}
+
+.Login::before {
+    background-image: url('../lib/image/icons/log.png');
+    background-size: cover;
+}
+
+.Login:hover::before {
+    background-image: url('../lib/image/icons/log-hover.gif');
+}
+
+.instagram::before {
+    background-image: url('../lib/image/icons/inst.png');
+    background-size: cover;
+}
+
+.instagram:hover:before {
+    background-image: url('../lib/image/icons/inst-hover.gif');
+}
+
+.basket::before {
+    background-image: url('../lib/image/icons/shop-cart.png');
+    background-size: cover;
+}
+
+.basket:hover:before {
+    background-image: url('../lib/image/icons/shop-cart-hover.gif');
+}
+
+._favorite {
+    background: center no-repeat url('../lib/image/icons/favorite.png');
+}
+
+    ._favorite:hover {
+        background: center no-repeat url('../lib/image/icons/favorite-hover.gif');
+        background-size: 24px;
+    }
+
+._close {
+    background-image: url('../lib/image/icons/close.png');
+    background-size: cover;
+}
+
+._close:hover {
+    background-image: url('../lib/image/icons/close-hover.png');
+    transition: 0.3s;
+}
+
+.icons-good {
+    background-image: url('../lib/image/icons/good.png');
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.icons-bad {
+    background-image: url('../lib/image/icons/bad.png');
+    background-size: cover;
+    transition: 0.3s;
+}

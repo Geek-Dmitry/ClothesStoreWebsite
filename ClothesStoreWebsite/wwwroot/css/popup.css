@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+.popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+    .popup:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup .popup__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+    }
+
+        .popup .popup__body .popup__content {
+            background: white;
+            color: black;
+            max-width: 900px;
+            max-height: 570px;
+            padding: 30px;
+            position: relative;
+            display: flex;
+        }
+
+            .popup .popup__body .popup__content .popup__close {
+                top: 20px;
+                right: 20px;
+                width: 25px;
+                height: 25px;
+                z-index: 1500;
+            }
+
+            .popup .popup__body .popup__content .popup__main-content {
+                display: flex;
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+                .popup .popup__body .popup__content .popup__main-content .popup__image {
+                    flex: 1.5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                    .popup .popup__body .popup__content .popup__main-content .popup__image img {
+                        width: auto;
+                        height: 100%;
+                    }
+
+                .popup .popup__body .popup__content .popup__main-content .popup__description {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    flex: 1;
+                    padding: 0px 30px;
+                }
+
+            .popup .popup__body .popup__content .popup__description .popup__title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 24px;
+                font-weight: 200;
+                padding-bottom: 50px;
+            }
+
+            .popup .popup__body .popup__content .popup__description .popup__price {
+                font-family: 'Poppins', sans-serif;
+                font-size: 20px;
+                font-weight: 200;
+                padding-bottom: 50px;
+            }
+
+            .popup .popup__body .popup__content .popup__description .popup-size {
+                width: 100%;
+                padding-bottom: 50px;
+            }
+
+                .popup .popup__body .popup__content .popup__description .popup-size .popup-size__title {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 12px;
+                    font-weight: 300;
+                    padding-bottom: 10px;
+                }
+
+                .popup .popup__body .popup__content .popup__description .popup-size .popup-size__list {
+                    width: 100%;
+                    height: 100%
+                }
+
+                    .popup .popup__body .popup__content .popup__description .popup-size .popup-size__list .popup-size__select {
+                        width: 100%;
+                        height: 40px;
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 14px;
+                        font-weight: 300;
+                        padding-left: 10px;
+                        border: 1px solid;
+                        border-color: rgba(129, 129, 129, 0.5);
+                        border-radius: 0;
+                        outline: none;
+                    }
+
+            .popup .popup__body .popup__content .popup__description .popup-quantity {
+                width: 90px;
+                height: 40px;
+                padding-bottom: 115px;
+            }
+
+                .popup .popup__body .popup__content .popup__description .popup-quantity .popup-quantity__title {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 12px;
+                    font-weight: 300;
+                    padding-bottom: 10px;
+                }
+
+                .popup .popup__body .popup__content .popup__description .popup-quantity .popup-quantity__list {
+                    width: 90px;
+                    height: 40px;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 14px;
+                    font-weight: 300;
+                    padding-left: 10px;
+                    border: 1px solid;
+                    border-color: rgba(129, 129, 129, 0.5);
+                    border-radius: 0;
+                    outline: none;
+                }
+
+            .popup .popup__body .popup__content .popup__description .popup-buttons__inform {
+                padding-top: 15px;
+                color: rgb(0, 0, 0);
+                text-decoration: underline;
+            }
+
+                .popup .popup__body .popup__content .popup__description .popup-buttons__inform:hover {
+                    color:rgb(100, 100, 100);
+                }
